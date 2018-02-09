@@ -7,6 +7,7 @@ import java.util.Objects;
 
 @Entity
 public class ExamHall {
+
     @Id
     @GeneratedValue
     private Long id;
@@ -15,8 +16,10 @@ public class ExamHall {
 
     private String hallName;
 
-    public ExamHall(Long id, int capacity, String hallName) {
-        this.id = id;
+
+    protected ExamHall(){}
+
+    public ExamHall(int capacity, String hallName) {
         this.capacity = capacity;
         this.hallName = hallName;
     }
